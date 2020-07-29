@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+  labels:
+    type: webserver
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      env: ws
+  template:
+    metadata:
+      labels:
+        env: ws
+    spec:
+      containers:
+      - image: modi2728/dev4web:v1
+        name: httpd
