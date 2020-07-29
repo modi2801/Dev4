@@ -16,4 +16,5 @@ spec:
     spec:
       containers:
       - image: modi2728/dev4web:v1
-        name: httpd
+        name: webserver
+        imagePullPolicy: Always
